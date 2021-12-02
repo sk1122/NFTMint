@@ -7,8 +7,6 @@ import myEpicNFT from "./utils/MyEpicNFT.json"
 // Constants
 const TWITTER_HANDLE = 'sk1122_';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const RARIBLE_LINK = 'https://rinkeby.rarible.com/token/';
-const TOTAL_MINT_COUNT = 50;
 const CONTRACT_ADDRESS = "0xD365365FE04dDd82427A2710B57CD054c7Cd1CDb"
 
 const App = () => {
@@ -124,9 +122,7 @@ const App = () => {
     }
   }
 
-  useEffect(() => {
-    checkIfWalletIsConnected()
-  }, [])
+  useEffect(checkIfWalletIsConnected(), [])
 
   return (
     <div className="App">
